@@ -502,7 +502,7 @@ section{
             text-align: center;
         }
         section{
-            padding-top: 50px;
+            padding: 50px 0;
         }
         .alpine-slider{
             min-height: 70vh;
