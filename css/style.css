@@ -506,6 +506,7 @@ section{
         }
         .alpine-slider{
             min-height: 70vh;
+            margin: auto;
         }  
     
     }
