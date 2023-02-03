@@ -17,7 +17,7 @@
 .scrollToTop-btn{
     z-index: 999;
     position: fixed;
-    background: #e62429;
+    background: #00003f;
     color: #fff;
     width: 45px;
     height: 45px;
@@ -55,7 +55,8 @@
 }
 
 .btn:hover{
-    background: #e62429;
+    background: #00003f;
+    color: #fff;
 }
 
 header{
@@ -73,7 +74,7 @@ header{
 }
   
 header.sticky{
-    background: #e62429;
+    background: #00003f;
     padding: 10px 100px;
 }
   
@@ -98,7 +99,7 @@ header .navigation a{
 }
 z
 header .navigation a:hover{
-    color: #e62429;
+    color: #00003f;
 }
   
 header.sticky .navigation a:hover{
@@ -107,7 +108,7 @@ header.sticky .navigation a:hover{
 
 
 *::selection{
-    background: #e62429;
+    background: #00003f;
     color:#fff;
 }
 
@@ -130,7 +131,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background: #e62429;
+    background: #00003f;
 }
 
 section{
@@ -154,10 +155,13 @@ section{
     flex: 1 1 45em;
 }
 
-.home .image img{
+.home .image video{
     width: 100%;
 }
-
+video::-webkit-media-controls-panel { 
+    display: none ! important; 
+    opacity: 1 ! important;
+}
 .home .content{
     flex:1 1 40rem;
     padding: 64px 0;
@@ -182,16 +186,16 @@ section{
 
 .heading{
     text-align: center;
-    color: #e62429;
+    color: #00003f;
     font-size: 30px;
 }
 
 .heading span{
-    color:#666;
+    color:#e62429;
 }
 :root {
-    --scrollcolor: #e62429;
-    --scrollbackground: #000;
+    --scrollcolor: #00003f;
+    --scrollbackground: #e62429;
 }
 .alpine-slider{
     background:#f0f0f0;
@@ -298,7 +302,7 @@ section{
     appearance: none;
     border: 0;
     border-radius: 2rem;
-    background: #e62429;
+    background: #00003f;
     color: #fff;
     padding: 1rem 2rem;
     font-size: 20px;
@@ -314,7 +318,7 @@ section{
 }
 
 .team{
-    background:#222;
+    background:#f0f0f0;
 }
 
 .team .heading span{
@@ -334,8 +338,13 @@ section{
     overflow: hidden;
     position: relative;
     margin: 25px;
-    box-shadow: 0 8px 10px #000;
-}
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)}
 
 .team .box-container .box img{
     height: 100%;
@@ -348,13 +357,13 @@ section{
     width: 100%;
     position: absolute;
     bottom:-100%; left:0;
-    background:rgba(0,0,0,.7);
+    background: #00003f;
+    transition: 0.5s;
 }
 
 .team .box-container .box:hover .info{
     bottom:0;
 }
-
 
 .team .box-container .box .info h3{
     font-size: 16px;
@@ -367,7 +376,6 @@ section{
     font-size: 13px;
     color: #e62429;
 }
-
 
 .team .box-container .box .info .stars i{
     font-size: 16px;
@@ -386,15 +394,18 @@ section{
 .about-us{
     height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(/images/banner-one.avif);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(/images/image-one.png);
     background-position: center;
     background-size: cover;
     text-align: center;
     color: #fff;
+    display: flex;
+    justify-content: center;
 }
   
 .about-us h2{
-    margin-top: 150px;
+    position: absolute;
+    top: 50%;
     font-size: 36px;
     font-weight: normal;
 }
@@ -573,13 +584,17 @@ section{
         }
         .about-us{
             min-height: 50vh;
+            display: flex;
+            justify-content: center;
         }
         .about .row{
             flex-direction: column;
         } 
         .about-us h2{
-            margin-top: 200px;
-            font-size: 26px;
+            position: absolute;
+            top: 35%;
+            margin: auto 20px;
+            font-size: 46px;
         }
     }
     

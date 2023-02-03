@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>utkaarsh Tech fest</title>
+    <title>The Future Tech</title>
+    <link rel="icon" type="image/x-icon" href="/images/THE-FUTURE-TECH.png">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
@@ -30,15 +31,18 @@
     <!-- home section starts  -->
     <section class="home" id="home">
         <div class="content">
-            <h3>amazing utkaarsh</h3>
-            <h1>welcome utkaarsh</h1>
+            <h3>amazing Tech</h3>
+            <h1>welcome The Future Tech</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus suscipit eum obcaecati dolorem unde. Iusto possimus sequi officiis harum architecto!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum!
             </p>
             <a href="https://forms.gle/cju3pDS9CY7Smtoh6" target="_blank" class="btn">register</a>
         </div>
         <div class="image">
-           <img src="images/banner-one.avif" alt="">
+           <!-- <img src="images/banner-one.avif" alt=""> -->
+           <video controls="false" autoplay="autoplay" loop muted >
+            <source src="/images/welcome-video.mp4">
+           </video>
         </div>
     </section>
     <!-- home section ends -->
@@ -49,81 +53,62 @@
         <div class="slider" x-data="{start: true, end: false}">
             <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-1.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/ai.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>Code In The Dark</h2>
+                        <h2>Artificial intelligence</h2>
                     </div>
                 </div>
                 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-2.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/Android-Application.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>Debug Me</h2>
+                        <h2>Android Application</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-3.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/Blind-Coding.png" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Blind Coding</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-4.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/debug.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Debug code</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-5.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/Ethical-Hacking.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Ethical Hacking</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-6.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/IOT.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Internet of Things</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-7.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/kahoot.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Kahoot IT</h2>
                     </div>
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-8.avif" alt="Image">
+                    <img class="slider__image" src="./images/events/Web-Designing.jpg" alt="Image">
                     <div class="slider__info">
-                        <h2>This is a card</h2>
+                        <h2>Web Designing</h2>
                     </div>
                 </div>
 
-                <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-9.avif" alt="Image">
-                    <div class="slider__info">
-                        <h2>This is a card</h2>
-                    </div>
-                </div>
-
-                <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-10.avif" alt="Image">
-                    <div class="slider__info">
-                        <h2>This is a card</h2>
-                    </div>
-                </div>
-
-                <div class="slider__item">
-                    <img class="slider__image" src="./images/photo-11.avif" alt="Image">
-                    <div class="slider__info">
-                        <h2>This is a card</h2>
-                    </div>
-                </div> 
+                 
             </div>
             <div class="slider__nav">
                 <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
@@ -133,43 +118,10 @@
     </section>
     <!-- slider section end -->
 
-    <!-- team section start -->
-    <section class="team" id="team">
-        <h1 class="heading"> <span>utkaarsh</span> team </h1>
-        <div class="box-container">
-            <div class="box">
-                <img src="/images/Black-Panther-1.jpg" alt="">
-                <div class="info">
-                    <h3>Rahul Tiwari</h3>
-                    <span>Developer</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/images/Captain-Marvel-1.jpg" alt="">
-                <div class="info">
-                    <h3>Abhay Vishwakarma</h3>
-                    <span>Event Manager</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/images/deadpool-1.jpg" alt="">
-                <div class="info">
-                    <h3>Mihir salgonkar</h3>
-                    <span>Event Manager</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- team section start -->
-
     <!-- footer section start -->
     <div class="footer">
         <div class="share">
-            <a href="#"><i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"><i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"><i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://www.instagram.com/the_future_tech_23/" target="_blank"><i class="fab fa-instagram"></i> instagram </a>
         </div>
         <h1 class="credit"> created by <a href="#">Rahul Tiwari.</a></h1>
     </div>
